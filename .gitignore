@@ -1,0 +1,53 @@
+
+# Visual Studio files
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+x64/
+Debug/
+Release/
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.log
+*.ipch
+*.aps
+*.ncb
+*.sdf
+*.opensdf
+*.tlog
+*.idb
+*.cache
+*.db
+*.o
+
+# Other
+*.class
+*.psess
+*.vsp
+*.scc
+*.sbr
+*.bak
+*.tmp
+*.~*
+*.swp
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Ignore generated files
+*.dll
+*.lib
+*.exp
+
+# Ignore directories for dependencies (if any)
+include/

@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="hell2077/hell2077.vcxproj" Id="82ad5c06-1737-4c98-979c-b5e5e6ac0e7e" />
+</Solution>
