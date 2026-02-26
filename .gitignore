@@ -1,34 +1,44 @@
+# ============================================
+# VISUAL STUDIO GITIGNORE WITH CPP EXCEPTIONS
+# ============================================
 
-# Visual Studio files
-.vs/
-*.vcxproj.user
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
-# Build results
+# Build outputs
 x64/
 Debug/
 Release/
-*.obj
+[Bb]in/
+[Oo]bj/
+[Ll]og/
 *.exe
+*.dll
+*.lib
+*.exp
 *.pdb
 *.ilk
+*.obj
+*.o
+*.a
+*.so
+*.cache
 *.log
+*.tlog
+*.idb
 *.ipch
 *.aps
 *.ncb
 *.sdf
 *.opensdf
-*.tlog
-*.idb
-*.cache
 *.db
-*.o
-
-# Other
 *.class
+
+# Visual Studio specific
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 *.psess
 *.vsp
 *.scc
@@ -44,10 +54,52 @@ CMakeCache.txt
 cmake_install.cmake
 Makefile
 
-# Ignore generated files
-*.dll
-*.lib
-*.exp
+# ============================================
+# FORCE TRACK ALL SOURCE FILES
+# ============================================
 
-# Ignore directories for dependencies (if any)
-include/
+# Explicitly un-ignore all C++ source files everywhere
+!*.cpp
+!*.c
+!*.h
+!*.hpp
+!*.hxx
+!*.cc
+!*.cxx
+!*.inl
+!*.inc
+
+# Un-ignore "Source Files" folder specifically (Visual Studio default)
+!Source?Files/
+!Source?Files/**/*.cpp
+!Source?Files/**/*.h
+!Source?Files/**/*.hpp
+
+# Also cover src, source, include variations
+!src/
+!src/**/
+!src/**/*.cpp
+!src/**/*.h
+!src/**/*.hpp
+
+!source/
+!source/**/
+!source/**/*.cpp
+!source/**/*.h
+!source/**/*.hpp
+
+!include/
+!include/**/
+!include/**/*.cpp
+!include/**/*.h
+!include/**/*.hpp
+
+# ============================================
+# KEEP IGNORING BUILD ARTIFACTS EVERYWHERE
+# ============================================
+**/Debug/
+**/Release/
+**/x64/
+**/*.obj
+**/*.exe
+**/*.pdb
