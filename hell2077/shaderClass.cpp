@@ -1,4 +1,4 @@
-#ifndef SHADER_H
+#ifndef SHADER_H 
 #define SHADER_H
 
 #include <glad>
@@ -8,6 +8,7 @@
 #include <sstream>
 #include <iostream>
 
+#I need to import this class into the main source file (after midterm)
 class Shader
 {
 public:
