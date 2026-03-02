@@ -20,7 +20,7 @@ const char* vertexShaderSource = R"(
 #version 330 core
 layout (location = 0) in vec3 aPos; //theposition variable has attribute position 0
 layout (location = 1) in vec3 aColor; //the color variable has attribute position 1
-out vec4 vertexColor;
+out vec3 vertexColor;
 void main()
 {
     gl_Position = vec4(aPos, 1.0);
@@ -32,7 +32,7 @@ void main()
 const char* fragmentShaderSource = R"(
 #version 330 core
 out vec4 FragColor;
-in vec4 vertexColor;
+in vec3 vertexColor;
 void main()
 {
     FragColor = vec4(vertexColor, 1.0f);
@@ -147,6 +147,7 @@ int main()
     glGenBuffers(1, &VBO);
 
     // Configure first triangle
+    glUseProgram(shaderProgram);
     glBindVertexArray(VAO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
