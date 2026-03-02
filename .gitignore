@@ -75,7 +75,7 @@ Makefile
 !Source?Files/**/*.h
 !Source?Files/**/*.hpp
 
-# Also cover src, source, include variations
+# Also cover src, source, include variation(s)
 !src/
 !src/**/
 !src/**/*.cpp
