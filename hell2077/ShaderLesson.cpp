@@ -11,10 +11,17 @@ const unsigned int SCR_HEIGHT = 600;
 
 const char* vertexShaderSource = "#version 330 core\n"
 "layout (location = 0) in vec3 aPos;\n"
+"layout (location = 1) in vec3 aColor;\n"
+"out vec3 outColor;\n"
+"uniform float xOffSet;\n"
 "void main()\n"
 "{\n"
-"  gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-"}\0";
+"  gl_Position = vec4(aPos.x + xOffset, aPos.y, aPos.z, 1.0);\n"
+"outColor = aColor;\n"
+"}\0";//inverse the triangle (not anyomre)
+
+//SEEMS LIEK TEH LINKING FOM THE VERTEX SHADER TO THE FRAGMENT SHADER IS NOT LINKING
+// i WILL RETURN BACK FROM TEH SPRING BREAK TO SOLVE THE ISSUE.
 
 const char* fragmentShader1Source = "#version 330 core\n"
 "out vec4 FragColor;\n"
