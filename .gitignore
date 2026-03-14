@@ -33,8 +33,11 @@ Release/
 
 # Visual Studio specific
 .vs/
-*.vcxproj.user
+*.vcxproj
 *.vcxproj.filters
+*.sln
+*.slnx
+*.vcxproj.user
 *.suo
 *.user
 *.userosscache
