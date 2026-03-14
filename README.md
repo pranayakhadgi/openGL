@@ -1,19 +1,10 @@
 # hell2077 — learning OpenGL in C++
+*(the name is inspired by livinamuk, even tho it's not a game engine, lol)*
 
-I started this with zero C++ knowledge. This repo tracks
+I started this with a little C++ knowledge. This repo tracks
 my progress through learnopengl.com, chapter by chapter.
-Each folder is a self-contained stage — compile and run
-any of them independently.
-
----
-
-## Progress
-
-| Stage | Topic | Status |
-|-------|-------|--------|
-| 01_triangle | First triangle, VAO/VBO basics | ✅ done |
-| 02_two_triangles | Multiple objects, different shaders | ✅ done |
-| 03_rectangle | Rectangle using EBO | ✅ done |
+Each folder is a self-contained stage. Compile and run
+any of them independently.|
 
 ---
 
