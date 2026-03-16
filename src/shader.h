@@ -1,6 +1,8 @@
 #ifndef SHADER_H 
 #define SHADER_H
 
+
+// the header import seems to have a certain issue. 
 #include <glad> // we include glad to import all the required OpenGl headers
 
 #include <string>
@@ -106,6 +108,8 @@ public:
 
 private:
 	// utility function for checking shader compilation/linking errors
+
+//it was weird, when the shaders didn't interlinked with one another in the main file (two triangle shaders)
 	void checkCompileErrors(unsigned int shader, std::string type)
 	{
 		int success;
