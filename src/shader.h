@@ -110,6 +110,7 @@ private:
 	// utility function for checking shader compilation/linking errors
 
 //it was weird, when the shaders didn't interlinked with one another in the main file (two triangle shaders)
+//yepp
 	void checkCompileErrors(unsigned int shader, std::string type)
 	{
 		int success;
