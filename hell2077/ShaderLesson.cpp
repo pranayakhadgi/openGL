@@ -152,6 +152,9 @@ int main() {
 	// Uncomment to draw in wireframe polygons.
 	// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); 
 
+	float offset = 0.5f;
+	shaderOrange.use();// Activate the shader program
+	shaderOrange.setFloat("xOffset", offset);//I am trying ot use the uniform offset to shift the triangle to the right
 
 	// 6. THE HOLY RENDER LOOP
 	// ------------------------------------------------------------------------
@@ -220,36 +223,4 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 	// Arguments: lower-left corner (x,y) and width, height.
 	glViewport(0, 0, width, height);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
