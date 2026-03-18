@@ -1,7 +1,9 @@
 #ifndef SHADER_H 
 #define SHADER_H
 
-#include <glad.h> // we include glad to import all the required OpenGl headers
+
+// the header import seems to have a certain issue. 
+#include <glad> // we include glad to import all the required OpenGl headers
 
 #include <string>
 #include <fstream>
@@ -30,11 +32,11 @@ public:
 			//open files
 			vShaderFile.open(vertexPath);
 			fShaderFile.open(fragmentPath);
-			std::stringstream vShaderStream, fShaderStream;
+			std::stringstream vShaderstream, fShaderStream;
 
 			// read file's buffer contents into streams
 			vShaderStream << vShaderFile.rdbuf();//readbuffer
-			fShaderStream << fShaderFile.rdbuf();
+			fShaderFileStream << fShaderFile.rdbuf();
 
 			// close file handlers
 			vShaderFile.close();// since we're done with the file
@@ -42,7 +44,7 @@ public:
 
 			// convert stream into string
 			vertexCode = vShaderStream.str();
-			fragmentCode = fShaderStream.str();
+			fragmentCode = fShaderStream.str()
 		}
 		catch (std::ifstream::failure e)
 		{
@@ -55,6 +57,8 @@ public:
 
 		// 2. compile the shaders
 		unsigned int vertex, fragment;
+		int success;
+		char infoLog[512];
 
 		// vertex Shader
 		vertex = glCreateShader(GL_VERTEX_SHADER);
@@ -104,6 +108,9 @@ public:
 
 private:
 	// utility function for checking shader compilation/linking errors
+
+//it was weird, when the shaders didn't interlinked with one another in the main file (two triangle shaders)
+//yepp
 	void checkCompileErrors(unsigned int shader, std::string type)
 	{
 		int success;
